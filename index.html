@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperate = function (celsius) {
+        this.celsius = celsius;
+        this.getConvertF = function () {
+            return this.celsius * 1.8 + 32;
+        };
+        this.getConvertK = function () {
+            return this.celsius + 273.15;
+        };
+        this.setCelsius = function (newCelsius) {
+            this.celsius = newCelsius;
+        }
+    };
+    let temperate = new Temperate(30);
+    let convertF = temperate.getConvertF();
+    let convertK = temperate.getConvertK();
+    document.write("Nhiệt độ C: " + temperate.celsius + "<br>Nhiệt độ F: " + convertF + "<br>Nhiệt độ K: " + convertK + "<br>");
+    temperate.setCelsius(40);
+    convertF = temperate.getConvertF();
+    convertK = temperate.getConvertK();
+    document.write("Nhiệt độ C: " + temperate.celsius + "<br>Nhiệt độ F: " + convertF + "<br>Nhiệt độ K: " + convertK + "<br>");
+
+
+</script>
+</body>
+</html>
